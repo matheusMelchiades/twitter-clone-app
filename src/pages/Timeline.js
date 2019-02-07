@@ -23,7 +23,7 @@ export default class Timeline extends Component {
     };
 
     subscribeToEvents = () => {
-        const io = socket('http://twitter-server-clone.herokuapp.com');
+        const io = socket('https://twitter-server-clone.herokuapp.com');
 
         io.on('tweet', data => {
             this.setState({ tweets: [data, ...this.state.tweets] })
