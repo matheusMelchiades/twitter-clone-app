@@ -30,7 +30,7 @@ export default class Timeline extends Component {
         });
 
         io.on('like', data => {
-            this.setState({ tweets: this.state.tweets.map(tweet => tweet._id == data._id ? data : tweet) });
+            this.setState({ tweets: this.state.tweets.map(tweet => tweet._id === data._id ? data : tweet) });
         });
     };
 
