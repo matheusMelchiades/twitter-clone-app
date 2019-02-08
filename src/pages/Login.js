@@ -6,8 +6,7 @@ import './Login.css';
 
 export default class Login extends Component {
     state = {
-        username: '',
-        password: ''
+        username: ''
     };
 
     handlerSubmit = (event) => {
@@ -32,7 +31,6 @@ export default class Login extends Component {
                 <img src={twitterLogo} alt="GoTwitter"/>
                 <form onSubmit={this.handlerSubmit}>
                     <input className="login-input" value={this.state.username} onChange={this.handleInputChange} placeholder="Nome de usuário"/>
-                    <input className="login-input" value={this.state.password} onChange={this.handleInputChange} placeholder="senha"/>
                     <button type="submit">Login</button>
                 </form>
             </div>
